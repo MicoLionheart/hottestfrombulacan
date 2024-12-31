@@ -1,0 +1,10 @@
+# Allow all search engines to index the site
+User-agent: *
+Disallow:
+
+# Optional: Block specific directories or files
+# Disallow: /private/
+# Disallow: /test.html
+
+# Sitemap declaration (if you have one)
+Sitemap: https://micolionheart.github.io/hottestfrombulacan/sitemap.xml
