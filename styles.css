@@ -63,6 +63,7 @@ header nav a:hover {
     margin-bottom: 1rem;
     color: #0056b3;
 }
+
 .content-section p {
     color: #333;
 }
@@ -71,18 +72,21 @@ header nav a:hover {
     text-decoration: none;
 }
 
-.content-section a:hover{
+.content-section a:hover {
     text-decoration: none;
 }
+
 .gallery-container {
     display: flex;
     gap: 1rem;
     justify-content: center;
+    flex-wrap: wrap; /* Ensure images wrap on smaller screens */
 }
 
 .gallery-container img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     border-radius: 8px;
     object-fit: cover;
 }
@@ -110,11 +114,54 @@ header nav a:hover, .content-section a:hover, footer a:hover {
     background-color: #0056b3; /* Add hover effect for better visual feedback */
     color: #fff;
 }
+
 a:focus, button:focus {
     outline: 2px solid #0056b3;
     outline-offset: 2px;
 }
+
 header, footer {
     background-color: #222; /* Darker gray for better readability */
     color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        padding: 1rem;
+    }
+
+    .content-section {
+        margin: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        margin: 0 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .hero-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .content-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .gallery-container img {
+        max-width: 100%;
+    }
 }
